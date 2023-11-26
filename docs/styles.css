@@ -1,0 +1,425 @@
+/* defining all the main colors variables */
+/* home page and template page styling --------------------- */
+:root {
+  --primary: #4caf50;
+  --white: #eeeeee;
+  --black: #111;
+}
+/* making page with zero margins and setting default fonbt */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  color: var(--white);
+}
+
+/* navbar stylings sizing and colorings */
+nav {
+  height: 6em;
+  background-color: var(--black);
+  display: flex;
+  justify-content: space-around;
+  line-height: 80px;
+  border-radius: 0 0 9px 9px;
+}
+/* row wise displaying of links */
+nav ul {
+  display: flex;
+}
+/* removing list bullets and having spaces between a links */
+nav ul li {
+  list-style-type: none;
+  margin: 0 18px;
+}
+/* removing underline and setting color of tetxs */
+nav ul li a {
+  text-decoration: none;
+  color: var(--white);
+}
+/* ?when hovering in a link change color  */
+nav ul li a:hover {
+  color: var(--primary);
+}
+
+/* styling walpapper image */
+#wallpaper img {
+  height: 80vh;
+  width: 100%;
+}
+
+/* container of blogs */
+.content {
+  margin: 0 auto;
+  padding: 20px 0;
+  width: 80%;
+}
+.content>*{
+    color: var(--black);
+}
+/* each blog in blogs */
+.module {
+    display: inline-block;
+    width: 40%;
+    margin: 8px auto;
+    border: 2px solid #ccc;
+  padding: 9px;
+  border-radius: 12px;
+  height: 180px;
+  overflow-y: scroll;
+  
+}
+.module>*{
+    color: var(--black);
+
+}
+/* all reviews */
+.alumnis {
+  background-color: #888;
+  display: flex;
+  overflow-x: scroll;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+
+/* each person in alumini */
+.person {
+  width: 90vw;
+  margin: 0 30px;
+}
+/* person image styling */
+.person img {
+  border-radius: 50%;
+  box-shadow: 1px 2px 28px var(--primary);
+}
+
+/* primary styling of button in page */
+.btn {
+  padding: 10px;
+  border: 2px solid var(--white);
+  background-color: var(--primary);
+  color: white;
+  border-radius: 8px;
+  margin: 12px;
+  width: 100px;
+}
+
+/* when hovering over any button */
+.btn:hover {
+  background-color: var(--white);
+  border-color: var(--primary);
+  color: var(--primary);
+  cursor: pointer;
+}
+.active {
+  color: var(--primary);
+}
+/* bottom copyright section */
+.copyright {
+  text-align: center;
+  height: 3rem;
+  line-height: 12px;
+  margin: 18px 0 0 0;
+  background-color: black;
+  position: relative;
+  bottom: 0;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+/* about page styling ----------------------------*/
+/* aboiuts */
+.abouts {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+.about > *,
+.about ul li,
+h1 {
+  color: var(--black);
+}
+
+/* image insertion of our introduction */
+/* setting all the child relative so it can be seen relative to parent about1 */
+.about1 > * {
+  position: relative;
+}
+
+/* making relative to stop ovrfloeing */
+.about1 {
+  position: relative;
+}
+
+/* separate pseudo element */
+.about1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("https://img.freepik.com/free-photo/smiling-business-team-standing-conference-room_1262-1963.jpg?size=626&ext=jpg&ga=GA1.1.386372595.1697673600&semt=ais");
+  background-size: fill;
+  background-position: center;
+  opacity: 0.4;
+}
+
+/* advantages image styleing */
+.about2 > * {
+  position: relative;
+  margin-left: 19px;
+}
+/* making relative to stop ovrfloeing */
+.about2 {
+  position: relative;
+}
+
+/* separate pseudo element */
+.about2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-image: url("https://st2.depositphotos.com/1014014/5312/i/450/depositphotos_53121195-stock-photo-check-mark-advantages-illustration-design.jpg");
+  background-size: contain;
+  background-position: center;
+  opacity: 0.2;
+}
+
+/* about main template */
+.about {
+  margin: 12px;
+  padding: 12px;
+  border: 2px solid var(--white);
+  border-radius: 12px;
+  text-align: justify;
+}
+.group-photo {
+  width: 140px;
+  height: 100px;
+  float: right;
+}
+
+/* courses pagge stylng -------------- */
+.courses {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+.course {
+  width: 180px;
+  height: 180px;
+  border: 2px inset var(--white);
+  margin: 9px 19px;
+  border-radius: 18px;
+  position: relative;
+  text-align: center;
+}
+.course p {
+  background: var(--black);
+  color: var(--white);
+}
+.course .btn {
+  margin: 90px 0 0 0;
+}
+
+/* devops styiing */
+.do {
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+.do .btn,
+p {
+  position: relative;
+}
+.do::before {
+  background-image: url("https://orangematter.solarwinds.com/wp-content/uploads/2022/03/DevOps-lifecycle-capabilities-1024x621.png");
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.4;
+}
+
+/* cloud computing styling */
+.cc {
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+.cc .btn,
+p {
+  position: relative;
+}
+.cc::before {
+  background-image: url("https://media.istockphoto.com/id/1399936043/photo/data-transfer-cloud-computing-technology-concept-there-is-a-large-prominent-cloud-icon-in-the.webp?b=1&s=170667a&w=0&k=20&c=aFBUG8f5R0e9G3rH7lLpC_NJHGVg53SH0nwNK-WSZLo=");
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.5;
+}
+
+/* project management styling */
+.pm {
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+.pm .btn,
+p {
+  position: relative;
+}
+.pm::before {
+  background-image: url("https://theteambuilderadrc.com/wp-content/uploads/project-management-graphic.jpg");
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.5;
+}
+
+/* system analysis styling */
+.sa {
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+.sa .btn,
+p {
+  position: relative;
+}
+.sa::before {
+  background-image: url("https://img.freepik.com/free-vector/illustration-data-analysis-graph_53876-18131.jpg?size=626&ext=jpg");
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.5;
+}
+
+/* data analysis styling */
+.da {
+  background-size: contain;
+  background-position: center;
+  position: relative;
+}
+.da .btn,
+p {
+  position: relative;
+}
+.da::before {
+  background-image: url("https://img.freepik.com/free-vector/data-inform-illustration-concept_114360-864.jpg?w=740&t=st=1700901933~exp=1700902533~hmac=96c60c4c72e55984d91ac113dec6b823652dc92c829fb07409aab062483b3076");
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background-size: contain;
+  background-position: center;
+  opacity: 0.5;
+}
+
+/* constact page styling------------------ */
+.contact-form {
+  width: 80%;
+  margin: 0 auto;
+}
+.form input,
+.form textarea {
+  color: var(--black);
+  margin: 11px auto;
+  display: block;
+  width: 80%;
+  border: 1px solid var(--primary);
+  outline: none;
+  height: 36px;
+}
+legend {
+  background: var(--primary);
+  border: 2px solid var(--white);
+}
+
+.maps {
+  margin: 30px auto;
+  width: 80%;
+}
+.maps iframe {
+  width: 100%;
+}
+.maps p {
+  color: var(--black);
+}
+
+/* media query for responsiveness */
+
+@media screen and (max-width: 600px) {
+  /* styling UL to make resopnsive */
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: relative;
+    bottom: 1000px;
+    left: 0;
+  }
+  /* #nav-links {
+    background-color: var(--black);
+    width: 100%;
+  } */
+  nav ul li {
+    background: var(--black);
+    width: 100%;
+    z-index: 3;
+  }
+  #bar {
+    height: 34px;
+    width: 70px;
+    border: 2px solid var(--white);
+    border-radius: 8px;
+    margin: 19px 12px 0 0;
+  }
+  .line {
+    height: 4px;
+    width: 80%;
+    background-color: var(--white);
+    margin: 5px auto;
+    border-radius: 19px;
+  }
+  nav ul {
+    bottom: 1000px;
+    transition: 0.9s;
+  }
+  .show {
+    transition: 0.9s;
+    bottom: -80px;
+  }
+  .fix{
+    opacity: .7;
+  }
+}
